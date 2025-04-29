@@ -16,7 +16,7 @@
 
 1.Клонирайте репото:
 
-git clone https://github.com/VaNkOSl/InovasysTask
+git clone https://github.com/VaNkOSl/InovasysTask.git
 
 2.Отворете проекта в Visual Studio 2022 
 
