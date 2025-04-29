@@ -11,7 +11,6 @@ public static class SqlQueries
 
     public const string InsertUser = @"
         INSERT INTO Users (Name, [Not Username], Email, Phone, Website, Note, IsActive, CreatedAt)
-        OUTPUT INSERTED.Id 
         VALUES(@Name, @NotUsername, @Email, @Phone, @Website, @Note, @IsActive, @CreatedAt);";
 
     public const string InsertAddress = @"
