@@ -2,7 +2,6 @@
 
 Структура на проекта
 
-- 'Mapper/UserMappingProfile'
 - 'Controllers/UserController.cs' - контролерът, който обработва заявки за потребителите.
 - 'Models/' - съдържа ViewModel и моделите за потребители и адреси.
 - 'Repositories/UserRepository.cs' – запазва всички потребители в базата данни чрез ADO.NET/Dapper.
