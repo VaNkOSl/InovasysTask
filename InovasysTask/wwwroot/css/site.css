@@ -1,0 +1,91 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.table-container {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+#usersTable {
+    width: max-content;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+}
+
+    #usersTable th,
+    #usersTable td {
+        padding: 8px;
+        text-align: left;
+        border: 1px solid #dee2e6;
+        white-space: nowrap;
+    }
+
+    #usersTable thead {
+        background-color: #343a40;
+        color: white;
+    }
+
+    #usersTable tbody tr:nth-child(even) {
+        background-color: #f8f9fa;
+    }
+
+    #usersTable th:nth-child(12),
+    #usersTable td:nth-child(12) {
+        min-width: 200px; 
+    }
+
+#loadDataBtn,
+#saveAllBtn {
+    padding: 8px 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+#loadDataBtn {
+    background-color: #007bff;
+    color: white;
+}
+
+#saveAllBtn {
+    background-color: #28a745;
+    color: white;
+}
+
+#loadDataBtn:hover {
+    background-color: #0056b3;
+}
+
+#saveAllBtn:hover {
+    background-color: #1e7e34;
+}
+
+textarea.form-control {
+    resize: vertical;
+    width: 100%;
+}
