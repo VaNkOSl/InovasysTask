@@ -2,6 +2,12 @@
 
 public static class SqlQueries
 {
+    public const string GetAllUsersAndAddressesFromDb = @"
+        SELECT u.Id, u.Name, u.[Not Username] AS Username, u.Email, u.Phone, u.Website, u.Note, u.IsActive,
+               a.Street, a.Suite, a.City, a.Zipcode, a.Lat, a.Lng
+        FROM Users u
+        JOIN Addresses a ON a.UserId = u.Id";
+
     public const string DeleteAllUsersAndAddresses = @"
         DELETE FROM Addresses;
         DELETE FROM Users;";

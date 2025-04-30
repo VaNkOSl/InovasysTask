@@ -15,6 +15,25 @@ public class UserRepository : IUserRepository
             ?? throw new ArgumentNullException(nameof(configuration));
     }
 
+    public async Task<IEnumerable<UserViewModel>> GetAllUsersFromDbAsync()
+    {
+        using var connection = new SqlConnection(_connectionString);
+        var sqlQuery = SqlQueries.GetAllUsersAndAddressesFromDb;
+
+        var result = await connection.QueryAsync<UserViewModel, AddressApiModel, GeoApiModel, UserViewModel>(
+               sqlQuery,
+               (user, address, geo) =>
+               {
+                   address.Geo = geo;
+                   user.Address = address;
+                   return user;
+               },
+               splitOn: "Street,Lat"
+           );
+
+        return result;
+    }
+
     public async Task SaveAllUsersAsync(IEnumerable<UserViewModel> users)
     {
         using var connection = new SqlConnection(_connectionString);

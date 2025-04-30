@@ -25,8 +25,8 @@
                     <td>${user.address?.zipcode ?? ''}</td>
                     <td>${user.address.geo?.lat ?? ''}</td>
                     <td>${user.address.geo?.lng ?? ''}</td>
-                    <td><textarea name="Note" class="form-control"></textarea></td>
-                    <td><input type="checkbox" name="IsActive" /></td>
+                    <td><textarea name="Note" class="form-control">${user.note ?? ''}</textarea></td>
+                    <td><input type="checkbox" name="IsActive" ${user.isActive ? 'checked' : ''} /></td>
                 `;
 
                 tbody.appendChild(row);
